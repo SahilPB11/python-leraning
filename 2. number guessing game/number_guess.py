@@ -4,10 +4,9 @@ top_of_range = input("Type a number: ")
 
 if top_of_range.isdigit():
     top_of_range = int(top_of_range)
-
-    if top_of_range <= 0:
-        print("please type a number larger then 0 next time")
-        quit()
+elif top_of_range <= 0:
+    print("please type a number larger then 0 next time")
+    quit()
 else:
     print("please type a number next time")
     quit()
@@ -27,11 +26,10 @@ while True:
     if user_guess == random_number:
         print("you got it")
         break
-    else: 
-        if user_guess > random_number:
-            print("You are above the number")
-        else:
-            print("You are below the number")
+    elif user_guess > random_number:
+        print("You are above the number")
+    else:
+        print("You are below the number")
 
 
 print("You got it in", guesses, "guesses")
